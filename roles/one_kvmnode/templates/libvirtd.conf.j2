@@ -49,8 +49,8 @@ tcp_port = "16509"
 # Override the default configuration which binds to all network
 # interfaces. This can be a numeric IPv4/6 address, or hostname
 #
-#listen_addr = {{ listen_addr }}
-listen_addr = "{{ hostvars[inventory_hostname]['ansible_'+listen_addr].ipv4.address }}"
+#listen_addr = "0.0.0.0"
+listen_addr = "0.0.0.0"
 
 
 # Flag toggling mDNS advertizement of the libvirt service.
