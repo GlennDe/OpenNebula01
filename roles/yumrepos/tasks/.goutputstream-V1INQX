@@ -1,0 +1,7 @@
+- name: enable selected repos
+  copy: src="{{ item }}.repo" dest="/etc/yum.repos.d/{{ item }}.repo" owner=root group=root mode=644
+  with_items: repos
+- name: install epel release
+  yum: pkg={{ item }} state=installed
+  with_items:
+    - epel-release
